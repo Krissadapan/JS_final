@@ -14,23 +14,9 @@ function createNewPost(){
         create_date: moment()
     };
 
-<<<<<<< HEAD
     var url = 'http://localhost:8080/api/posts';
     // POINT 9. Insert data to REST API with axios
 
-=======
-    console.log(newpost);
-
-    var url = '/api/posts';
-    axios.post(url, newpost)
-      .then(function (response) {
-        console.log(response);
-        window.location.href = 'index.html';
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
->>>>>>> 128767c772dba01c7635679d0b5df9309c12029c
 }
 
 function previewPhoto(src){

@@ -20,6 +20,13 @@ function getAllPosts(req, res) {
 
 function getPostsByUser(req, res) {
     // Additional 1.
+    var query = { username: req.query.username };
+    var sort = {create_date : -1}; 
+    db.collection("posts").find(query).sort(sort).toArray(function (err, result) {
+        if (err) throw err;
+        console.log(result);
+        res.json(result);
+    });
 }
 
 function insertNewPosts(req, res) {
